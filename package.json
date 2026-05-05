@@ -1,0 +1,17 @@
+{
+  "name": "dra-sandra-molano",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/styles.css --style=compressed",
+    "sass:watch": "sass scss/main.scss css/styles.css --watch",
+    "build": "sass scss/main.scss css/styles.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

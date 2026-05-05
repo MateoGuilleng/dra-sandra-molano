@@ -1,0 +1,74 @@
+// =============================================
+// GALERÍA + ANTES & DESPUÉS
+// =============================================
+@use '../abstracts' as *;
+
+// --- Before & After ---
+.before-after {
+  @include section-padding;
+  background: $black;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-md;
+
+  @include respond(md) { grid-template-columns: 1fr; }
+}
+
+// --- Gallery ---
+.gallery {
+  @include section-padding;
+  background: $black-soft;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 10px;
+
+  @include respond(lg) { grid-template-columns: repeat(2, 1fr); }
+  @include respond(sm) { grid-template-columns: 1fr; }
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: $radius;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba($gold, 0);
+    transition: background $transition;
+  }
+
+  &:hover::after { background: rgba($gold, 0.08); }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease, filter 0.55s ease;
+    filter: grayscale(15%);
+  }
+
+  &:hover img {
+    transform: scale(1.07);
+    filter: grayscale(0%) brightness(1.05);
+  }
+
+  &.tall {
+    grid-row: span 2;
+    @include respond(lg) { grid-row: span 1; }
+  }
+
+  &.wide {
+    grid-column: span 2;
+    @include respond(sm) { grid-column: span 1; }
+  }
+}

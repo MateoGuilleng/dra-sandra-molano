@@ -1,0 +1,61 @@
+// =============================================
+// VARIABLES — Dra. Sandra Molano
+// Paleta: Negro profundo | Dorado rico | Blanco cálido
+// =============================================
+
+// --- Colores dorados (ricos, no amarillos) ---
+$gold:          #B8860B;   // DarkGoldenrod — dorado profundo
+$gold-light:    #D4A017;   // dorado medio cálido
+$gold-bright:   #C9A84C;   // dorado clásico
+$gold-pale:     #E8C97A;   // dorado suave para hovers
+$gold-dark:     #8B6508;   // dorado oscuro para sombras
+$gold-shine:    #F0D080;   // destello dorado
+$gold-muted:    rgba(184, 134, 11, 0.15); // dorado translúcido
+
+// --- Negros y oscuros ---
+$black:         #080808;
+$black-soft:    #111111;
+$black-card:    #0E0E0E;
+$black-mid:     #161616;
+
+// --- Blancos y cremas ---
+$white:         #FFFFFF;
+$cream:         #F8F2E6;
+$cream-soft:    #EDE5D4;
+
+// --- Grises ---
+$gray-dark:     #555555;
+$gray:          #888888;
+$gray-light:    #BBBBBB;
+$gray-pale:     #DDDDDD;
+
+// --- Tipografías ---
+$font-serif:    'Cormorant Garamond', Georgia, serif;
+$font-sans:     'Montserrat', sans-serif;
+
+// --- Espaciado ---
+$section-pad:   100px;
+$container-max: 1200px;
+$gap-sm:        16px;
+$gap-md:        24px;
+$gap-lg:        48px;
+$gap-xl:        80px;
+
+// --- Bordes y radios ---
+$radius:        3px;
+$radius-md:     8px;
+
+// --- Transiciones ---
+$transition:    0.35s ease;
+$transition-slow: 0.6s ease;
+
+// --- Sombras ---
+$shadow:        0 8px 40px rgba(0,0,0,0.4);
+$shadow-gold:   0 4px 24px rgba(184,134,11,0.25);
+$shadow-card:   0 16px 48px rgba(0,0,0,0.45);
+
+// --- Breakpoints ---
+$bp-xl:   1280px;
+$bp-lg:   1024px;
+$bp-md:   768px;
+$bp-sm:   480px;

@@ -1,0 +1,30 @@
+// =============================================
+// TRATAMIENTOS
+// =============================================
+@use '../abstracts' as *;
+
+.treatments {
+  @include section-padding;
+  background: $black-soft;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba($gold, 0.2), transparent);
+  }
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-md;
+  margin-top: 16px;
+
+  @include respond(lg) { grid-template-columns: repeat(2, 1fr); }
+  @include respond(md) { grid-template-columns: 1fr; }
+}

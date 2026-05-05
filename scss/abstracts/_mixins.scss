@@ -1,0 +1,116 @@
+// =============================================
+// MIXINS — Dra. Sandra Molano
+// =============================================
+@use 'variables' as *;
+
+// Responsive breakpoints
+@mixin respond($bp) {
+  @if $bp == xl    { @media (max-width: 1280px) { @content; } }
+  @else if $bp == lg { @media (max-width: 1024px) { @content; } }
+  @else if $bp == md { @media (max-width: 768px)  { @content; } }
+  @else if $bp == sm { @media (max-width: 480px)  { @content; } }
+}
+
+// Flex centrado
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex entre extremos
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Texto truncado
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Overlay oscuro
+@mixin overlay($opacity: 0.75) {
+  position: absolute;
+  inset: 0;
+  background: rgba($black, $opacity);
+}
+
+// Gradiente dorado
+@mixin gold-gradient($dir: to right) {
+  background: linear-gradient($dir, $gold-dark, $gold-light, $gold-dark);
+}
+
+// Borde dorado sutil
+@mixin gold-border($opacity: 0.2) {
+  border: 1px solid rgba($gold, $opacity);
+}
+
+// Sección padding
+@mixin section-padding {
+  padding: $section-pad 0;
+}
+
+// Animación fade-up
+@mixin fade-up-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity $transition-slow, transform $transition-slow;
+}
+
+@mixin fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Hover lift
+@mixin hover-lift($y: -6px) {
+  transition: transform $transition, box-shadow $transition, border-color $transition;
+  &:hover {
+    transform: translateY($y);
+    box-shadow: $shadow-card;
+  }
+}
+
+// Botón base
+@mixin btn-base {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: all $transition;
+  white-space: nowrap;
+}
+
+// Label de sección
+@mixin section-label {
+  font-family: $font-sans;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: $gold-light;
+  margin-bottom: 12px;
+}
+
+// Título de sección
+@mixin section-title {
+  font-family: $font-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: $white;
+  line-height: 1.15;
+  margin-bottom: 20px;
+
+  em {
+    font-style: italic;
+    color: $gold-light;
+  }
+}

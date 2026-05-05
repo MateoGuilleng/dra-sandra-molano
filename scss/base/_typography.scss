@@ -1,0 +1,43 @@
+// =============================================
+// TIPOGRAFÍA & UTILIDADES GLOBALES
+// =============================================
+@use '../abstracts' as *;
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  @include section-label;
+  &.center { text-align: center; }
+}
+
+.section-title {
+  @include section-title;
+  &.center { text-align: center; }
+}
+
+.section-desc {
+  color: $gray-light;
+  max-width: 600px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  &.center {
+    text-align: center;
+    margin: 0 auto 52px;
+  }
+}
+
+// Decorador de línea dorada
+.gold-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: $gold-light;
+  margin-bottom: 20px;
+
+  &.center { margin: 0 auto 20px; }
+}
