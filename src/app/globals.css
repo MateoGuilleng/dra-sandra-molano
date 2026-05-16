@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold:        #B8860B;
+  --color-gold-light:  #D4A017;
+  --color-gold-bright: #C9A84C;
+  --color-gold-pale:   #E8C97A;
+  --color-gold-dark:   #8B6508;
+  --color-black:       #080808;
+  --color-black-soft:  #111111;
+  --color-black-card:  #0E0E0E;
+  --color-cream:       #F8F2E6;
+  --color-cream-soft:  #EDE5D4;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Montserrat', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-black);
+  color: var(--color-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Particle animation */
+@keyframes floatParticle {
+  0%   { opacity: 0; transform: translateY(0) rotate(0deg); }
+  20%  { opacity: 0.6; }
+  80%  { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-120px) rotate(180deg); }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
+}
+
+/* Scroll line animation */
+@keyframes scrollLine {
+  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  50%  { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+}
+
+.scroll-line { animation: scrollLine 2.2s ease-in-out infinite; }
+
+/* Fade-up on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gold strip marquee */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 18s linear infinite; }
