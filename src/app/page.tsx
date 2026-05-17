@@ -6,6 +6,7 @@ import Treatments from "@/components/Treatments";
 import BeforeAfter from "@/components/BeforeAfter";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -20,6 +21,7 @@ export default function Home() {
       <GoldStrip />
       <About />
       <Treatments />
+      <Products />
       <BeforeAfter />
       <Gallery />
       <Testimonials />

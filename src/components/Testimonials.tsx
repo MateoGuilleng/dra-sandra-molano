@@ -1,23 +1,40 @@
+import Image from "next/image";
+
 const reviews = [
   {
+    avatar: "/images/reviews/gustavo-castro.jpg",
     initial: "G",
     name: "Gustavo Castro",
-    time: "Hace 7 meses",
     text: "Es un centro con buena locación, sin embargo, a mi punto de vista la atención al cliente es su fortaleza más grande porque tienen la prestación de diferentes servicios y le orientan a cada persona según la necesidad con soluciones prácticas y tangibles. La Dra Sandra y su grupo de colaboradores son muy atentos.",
   },
   {
+    avatar: "/images/reviews/rodrigo-uribe.jpg",
     initial: "R",
     name: "Rodrigo Uribe",
-    time: "Hace una semana",
     text: "Profesionalismo y gran atención fue el mejor regalo que pude darle a mi madre, infinitas gracias.",
   },
   {
+    avatar: "/images/reviews/juan-castiblanco.jpg",
     initial: "J",
     name: "Juan Carlos Castiblanco",
-    time: "Hace una semana",
     text: "Excelente servicio y personas muy profesionales. La doctora Sandra sabe muy bien del cuidado estético en general. Muy recomendados.",
   },
 ];
+
+function Avatar({ src, initial }: { src: string; initial: string }) {
+  return (
+    <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-[#B8860B]/40">
+      <Image
+        src={src}
+        alt={initial}
+        fill
+        className="object-cover"
+        onError={undefined}
+        unoptimized
+      />
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
@@ -39,25 +56,26 @@ export default function Testimonials() {
           {reviews.map((r) => (
             <div
               key={r.name}
-              className="fade-up bg-[#0E0E0E] border border-[#B8860B]/10 hover:border-[#B8860B]/40 hover:-translate-y-1 transition-all duration-300 p-9"
+              className="fade-up flex flex-col bg-[#0E0E0E] border border-[#B8860B]/10 hover:border-[#B8860B]/40 hover:-translate-y-1 transition-all duration-300 p-8"
             >
-              <div className="flex gap-1 text-[#D4A017] text-[0.82rem] tracking-[4px] mb-5">
-                {"★★★★★"}
-              </div>
+              {/* Stars */}
+              <div className="text-[#D4A017] text-[0.85rem] tracking-[4px] mb-5">★★★★★</div>
+
+              {/* Quote — grows to fill space, pushing author to bottom */}
               <blockquote
-                className="text-[1.05rem] italic text-[#BBBBBB] leading-[1.85] mb-7"
+                className="flex-1 text-[1.02rem] italic text-[#BBBBBB] leading-[1.9] mb-8"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
                 {r.text}
               </blockquote>
-              <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#8B6508] to-[#D4A017] text-[#080808] flex items-center justify-center font-bold text-base shrink-0">
-                  {r.initial}
-                </div>
-                <div>
-                  <strong className="block text-white text-[0.9rem]">{r.name}</strong>
-                  <span className="text-[0.72rem] text-[#D4A017] tracking-[0.08em]">{r.time}</span>
-                </div>
+
+              {/* Divider */}
+              <div className="w-full h-px bg-[#B8860B]/15 mb-6" />
+
+              {/* Author — always at the bottom */}
+              <div className="flex items-center gap-3">
+                <Avatar src={r.avatar} initial={r.initial} />
+                <strong className="text-white text-[0.92rem] font-medium">{r.name}</strong>
               </div>
             </div>
           ))}
