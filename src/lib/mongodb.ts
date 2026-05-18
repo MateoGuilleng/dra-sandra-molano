@@ -6,20 +6,38 @@ if (!URI) {
   throw new Error("MONGODB_URI no está definida en las variables de entorno.");
 }
 
-// En desarrollo Next.js recarga módulos en cada hot-reload, por lo que
-// guardamos la promesa de conexión en el objeto global para reutilizarla.
 declare global {
   // eslint-disable-next-line no-var
-  var _mongooseConn: Promise<typeof mongoose> | undefined;
+  var _mongooseConn: {
+    conn: typeof mongoose | null;
+    promise: Promise<typeof mongoose> | null;
+  };
+}
+
+if (!global._mongooseConn) {
+  global._mongooseConn = { conn: null, promise: null };
 }
 
 async function connectDB(): Promise<typeof mongoose> {
-  if (global._mongooseConn) {
-    return global._mongooseConn;
+  // Ya conectado
+  if (global._mongooseConn.conn) {
+    return global._mongooseConn.conn;
   }
 
-  global._mongooseConn = mongoose.connect(URI as string);
-  return global._mongooseConn;
+  // Conexión en progreso
+  if (!global._mongooseConn.promise) {
+    global._mongooseConn.promise = mongoose
+      .connect(URI as string, {
+        bufferCommands: false,
+      })
+      .then((m) => {
+        console.log("[MongoDB] Conectado a:", m.connection.db?.databaseName);
+        return m;
+      });
+  }
+
+  global._mongooseConn.conn = await global._mongooseConn.promise;
+  return global._mongooseConn.conn;
 }
 
 export default connectDB;

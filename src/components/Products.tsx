@@ -1,22 +1,18 @@
 import ProductsCarousel from "@/components/ProductsCarousel";
-import type { IProducto } from "@/models/Producto";
+import connectDB from "@/lib/mongodb";
+import Producto, { type IProducto } from "@/models/Producto";
 
 async function getProductos(): Promise<IProducto[]> {
   try {
-    // En producción usa la URL absoluta; en desarrollo usa la relativa via localhost
-    const base =
-      process.env.NEXT_PUBLIC_BASE_URL ??
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-
-    const res = await fetch(`${base}/api/productos`, {
-      // No cachear — siempre datos frescos desde MongoDB
-      cache: "no-store",
-    });
-
-    if (!res.ok) return [];
-    const json = await res.json();
-    return json.data ?? [];
-  } catch {
+    await connectDB();
+    const docs = await Producto.find({}).sort({ orden: 1, createdAt: 1 }).lean();
+    // lean() devuelve objetos planos — serializar _id a string para el cliente
+    return docs.map((d) => ({
+      ...d,
+      _id: String(d._id),
+    })) as IProducto[];
+  } catch (err) {
+    console.error("[Products] Error al obtener productos:", err);
     return [];
   }
 }
