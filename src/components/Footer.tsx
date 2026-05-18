@@ -21,7 +21,7 @@ export default function Footer() {
               {[
                 { href: "https://www.instagram.com/dra.sandramolano/", icon: "fa-instagram", label: "Instagram" },
                 { href: "https://www.facebook.com/drasandramolano/", icon: "fa-facebook-f", label: "Facebook" },
-                { href: "https://wa.me/573000000000", icon: "fa-whatsapp", label: "WhatsApp" },
+                { href: "https://wa.me/573508013250", icon: "fa-whatsapp", label: "WhatsApp" },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -75,7 +75,7 @@ export default function Footer() {
               {[
                 { icon: "fa-phone", text: "+57 350 8013250" },
                 { icon: "fa-envelope", text: "info@drasandramolano.com" },
-                { icon: "fa-map-marker-alt", text: "Bogotá, Colombia" },
+                { icon: "fa-map-marker-alt", text: "Bogotá, Colombia: Dg. 46 Sur #53 -27, Tunjuelito, Bogotá, Cundinamarca" },
                 { icon: "fa-clock", text: "Lun – Sáb: 8am – 6pm" },
               ].map((item) => (
                 <li key={item.text} className="flex items-center gap-2.5 text-[0.87rem] text-[#888888]">

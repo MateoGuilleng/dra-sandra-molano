@@ -49,7 +49,7 @@ export default function Testimonials() {
           className="text-center text-[2.2rem] font-light text-white mb-12 leading-tight"
           style={{ fontFamily: "var(--font-serif)" }}
         >
-          Lo que dicen <em className="text-[#D4A017] italic">nuestras pacientes</em>
+          Lo que dicen <em className="text-[#D4A017] italic">nuestros pacientes</em>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
