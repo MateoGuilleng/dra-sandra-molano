@@ -73,7 +73,7 @@ export default function Footer() {
             <h4 className="text-[0.72rem] font-semibold tracking-[0.18em] uppercase text-white mb-5">Contacto</h4>
             <ul className="flex flex-col gap-3">
               {[
-                { icon: "fa-phone", text: "+57 300 000 0000" },
+                { icon: "fa-phone", text: "+57 350 8013250" },
                 { icon: "fa-envelope", text: "info@drasandramolano.com" },
                 { icon: "fa-map-marker-alt", text: "Bogotá, Colombia" },
                 { icon: "fa-clock", text: "Lun – Sáb: 8am – 6pm" },
