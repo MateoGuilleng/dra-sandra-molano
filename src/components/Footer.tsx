@@ -75,7 +75,7 @@ export default function Footer() {
               {[
                 { icon: "fa-phone", text: "+57 350 8013250" },
                 { icon: "fa-envelope", text: "info@drasandramolano.com" },
-                { icon: "fa-map-marker-alt", text: "Bogotá, Colombia: Dg. 46 Sur #53 -27, Tunjuelito, Bogotá, Cundinamarca" },
+                { icon: "fa-map-marker-alt", text: "Dg. 46 Sur #53 -27, Tunjuelito, Bogotá, Cundinamarca" },
                 { icon: "fa-clock", text: "Lun – Sáb: 8am – 6pm" },
               ].map((item) => (
                 <li key={item.text} className="flex items-center gap-2.5 text-[0.87rem] text-[#888888]">
@@ -88,14 +88,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#B8860B]/10">
-        <div className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[0.78rem] text-[#555555]">
-          <p>&copy; 2026 Dra. Sandra Molano. Todos los derechos reservados.</p>
-          <p>
-            Diseñado con <i className="fas fa-heart text-[#B8860B]" /> para tu bienestar
-          </p>
-        </div>
-      </div>
+
+
     </footer>
   );
 }

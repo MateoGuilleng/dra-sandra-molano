@@ -11,7 +11,6 @@ const links = [
   { href: "#productos", label: "Productos" },
   { href: "#galeria", label: "Galería" },
   { href: "#resenas", label: "Reseñas" },
-  { href: "#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
