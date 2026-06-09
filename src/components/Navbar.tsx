@@ -43,13 +43,15 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#inicio" onClick={(e) => handleAnchor(e, "#inicio")} className="flex items-center">
-          <Image
-            src="/images/logo/logo.jpg"
-            alt="Dra. Sandra Molano"
-            width={120}
-            height={48}
-            className="h-12 w-auto object-contain"
-          />
+          <div className="relative h-12 w-[120px]">
+            <Image
+              src="/images/logo/logo.jpg"
+              alt="Dra. Sandra Molano"
+              fill
+              sizes="120px"
+              className="object-contain object-left"
+            />
+          </div>
         </a>
 
         {/* Desktop links */}

@@ -7,13 +7,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Image
-              src="/images/logo/logo.jpg"
-              alt="Dra. Sandra Molano"
-              width={120}
-              height={48}
-              className="h-12 w-auto object-contain mb-4"
-            />
+            <div className="relative h-12 w-[120px] mb-4">
+              <Image
+                src="/images/logo/logo.jpg"
+                alt="Dra. Sandra Molano"
+                fill
+                sizes="120px"
+                className="object-contain object-left"
+              />
+            </div>
             <p className="text-[0.87rem] text-[#888888] leading-[1.85] mb-6">
               Medicina estética de excelencia. Realzamos tu belleza natural con ciencia, arte y dedicación.
             </p>
