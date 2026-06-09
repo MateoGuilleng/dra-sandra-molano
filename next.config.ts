@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // Incluye 1080 para que sirva la imagen a resolución nativa
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    qualities: [100],
+  },
 };
 
 export default nextConfig;

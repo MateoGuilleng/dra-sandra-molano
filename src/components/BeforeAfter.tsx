@@ -1,9 +1,9 @@
 import FallbackImg from "@/components/FallbackImg";
 
 const cases = [
-  { img: "/images/before-after/caso1.jpg", label: "Armonización Facial" },
-  { img: "/images/before-after/caso2.jpg", label: "Toxina Botulínica" },
-  { img: "/images/before-after/caso3.jpg", label: "Bioestimuladores" },
+  { img: "/images/before-after/caso1.jpg", label: "Anti verrugas" },
+  { img: "/images/before-after/caso2.jpg", label: "Tratamiento capilar" },
+  { img: "/images/before-after/caso3.jpg", label: "Labios con acido hialuronico" },
 ];
 
 export default function BeforeAfter() {

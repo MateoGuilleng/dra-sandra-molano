@@ -48,12 +48,12 @@ export default async function Treatments() {
                 className="fade-up bg-[#0E0E0E] border border-[#B8860B]/12 hover:border-[#B8860B]/45 hover:-translate-y-1 transition-all duration-350 overflow-hidden group"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
-                <div className="overflow-hidden h-[220px]">
+                <div className="overflow-hidden aspect-[4/5]">
                   <FallbackImg
                     src={t.imagen}
                     alt={t.nombre}
-                    fallback={`https://placehold.co/400x300/0E0E0E/B8860B?text=${encodeURIComponent(t.nombre)}`}
-                    className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.07] group-hover:brightness-105 transition-all duration-500"
+                    fallback={`https://placehold.co/400x500/0E0E0E/B8860B?text=${encodeURIComponent(t.nombre)}`}
+                    className="w-full h-full object-contain bg-[#0a0a0a] group-hover:scale-[1.03] transition-all duration-500"
                   />
                 </div>
                 <div className="p-7">

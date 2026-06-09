@@ -6,16 +6,23 @@ export default function About() {
       <div className="absolute top-[-80px] right-[-80px] w-[400px] h-[400px] rounded-full bg-radial-[circle] from-[#B8860B]/4 to-transparent pointer-events-none" />
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          {/* Image */}
-          <div className="relative">
+          {/* Contenedor con la proporción exacta de tu imagen (4:5) */}
+          <div className="relative w-full max-w-[500px] aspect-[4/5] mx-auto">
+            {/* Border decorativo */}
             <div className="absolute -top-3 -left-3 right-3 bottom-3 border border-[#B8860B]/20 pointer-events-none z-0" />
+
+            {/* Imagen en Alta Calidad */}
             <Image
               src="/images/team/dra-sandra.jpg"
               alt="Dra. Sandra Molano"
-              width={500}
-              height={620}
-              className="relative z-[1] w-full h-[620px] object-cover grayscale-[10%] contrast-105 md:h-[420px] lg:h-[620px]"
+              fill
+              priority
+              quality={100}
+              sizes="(max-width: 768px) 100vw, 540px"
+              className="z-[1] object-cover object-top"
             />
+
+            {/* Badge de Experiencia */}
             <div className="absolute -bottom-6 -right-6 z-[2] bg-gradient-to-br from-[#8B6508] to-[#D4A017] text-[#080808] px-7 py-6 text-center shadow-[0_4px_24px_rgba(184,134,11,0.25)]">
               <span className="block text-[2.8rem] leading-none font-semibold" style={{ fontFamily: "var(--font-serif)" }}>+10</span>
               <span className="text-[0.68rem] font-semibold tracking-[0.1em] uppercase leading-[1.5]">Años de<br />Experiencia</span>
