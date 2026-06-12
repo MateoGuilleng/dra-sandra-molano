@@ -77,7 +77,7 @@ export default function Footer() {
               {[
                 { icon: "fa-phone", text: "+57 350 8013250" },
                 { icon: "fa-envelope", text: "info@drasandramolano.com" },
-                { icon: "fa-map-marker-alt", text: "Dg. 46 Sur #53 -27, Tunjuelito, Bogotá, Cundinamarca" },
+                { icon: "fa-map-marker-alt", text: "Dg. 46 Sur #53 -27, Barrio Venecia, Bogotá, Cundinamarca" },
                 { icon: "fa-clock", text: "Lun – Sáb: 8am – 6pm" },
               ].map((item) => (
                 <li key={item.text} className="flex items-center gap-2.5 text-[0.87rem] text-[#888888]">
