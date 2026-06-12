@@ -75,7 +75,7 @@ export default function Navbar() {
           onClick={(e) => handleAnchor(e, "#contacto")}
           className="hidden md:inline-flex items-center px-6 py-2.5 bg-[#B8860B] text-[#080808] text-[0.72rem] font-semibold tracking-[0.14em] uppercase border border-[#B8860B] hover:bg-[#E8C97A] hover:border-[#E8C97A] transition-all duration-300"
         >
-          Contacto
+          Dirección
         </a>
 
         {/* Hamburger */}

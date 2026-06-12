@@ -1,6 +1,14 @@
 export default function WhatsAppFloat() {
   return (
     <div className="fixed bottom-8 right-8 z-[999] flex flex-col gap-3 items-center">
+      {/* Ubicación */}
+      <a
+        href="/ubicacion"
+        aria-label="Ver ubicación"
+        className="w-12 h-12 bg-[#B8860B] rounded-full flex items-center justify-center text-[#080808] text-xl shadow-[0_4px_20px_rgba(184,134,11,0.4)] hover:scale-110 hover:bg-[#D4A017] transition-all duration-300"
+      >
+        <i className="fas fa-map-marker-alt" />
+      </a>
       {/* Instagram */}
       <a
         href="https://www.instagram.com/dra.sandramolano/"

@@ -59,7 +59,7 @@ export default function About() {
               href="#contacto"
               className="inline-flex px-10 py-3.5 bg-[#B8860B] text-[#080808] text-[0.72rem] font-semibold tracking-[0.14em] uppercase border border-[#B8860B] hover:bg-[#E8C97A] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Conoce más
+              Dirección
             </a>
           </div>
         </div>

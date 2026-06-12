@@ -70,7 +70,7 @@ export default function Hero() {
             onClick={() => scrollTo("#contacto")}
             className="px-10 py-3.5 border border-[#B8860B] text-[#B8860B] text-[0.72rem] font-semibold tracking-[0.14em] uppercase hover:bg-[#B8860B] hover:text-[#080808] hover:-translate-y-0.5 transition-all duration-300"
           >
-            Contáctanos
+            Dirección
           </button>
         </div>
       </div>

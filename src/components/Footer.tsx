@@ -43,10 +43,10 @@ export default function Footer() {
           <div>
             <h4 className="text-[0.72rem] font-semibold tracking-[0.18em] uppercase text-white mb-5">Navegación</h4>
             <ul className="flex flex-col gap-3">
-              {["Inicio", "Nosotros", "Tratamientos", "Galería", "Reseñas", "Contacto"].map((item) => (
+              {["Inicio", "Nosotros", "Tratamientos", "Galería", "Reseñas", "Dirección"].map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase().replace("ñ", "n").replace("é", "e").replace("í", "i")}`}
+                    href={`#${item === "Dirección" ? "contacto" : item.toLowerCase().replace("ñ", "n").replace("é", "e").replace("í", "i")}`}
                     className="text-[0.87rem] text-[#888888] hover:text-[#D4A017] transition-colors duration-300"
                   >
                     {item}
@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[0.72rem] font-semibold tracking-[0.18em] uppercase text-white mb-5">Contacto</h4>
+            <h4 className="text-[0.72rem] font-semibold tracking-[0.18em] uppercase text-white mb-5">Dirección</h4>
             <ul className="flex flex-col gap-3">
               {[
                 { icon: "fa-phone", text: "+57 350 8013250" },
