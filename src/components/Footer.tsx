@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {[
                 { icon: "fa-phone", text: "+57 350 8013250" },
-                { icon: "fa-envelope", text: "info@drasandramolano.com" },
+                { icon: "fa-envelope", text: "Dra.sandramolano@gmail.com" },
                 { icon: "fa-map-marker-alt", text: "Dg. 46 Sur #53 -27, Barrio Venecia, Bogotá, Cundinamarca" },
                 { icon: "fa-clock", text: "Lun – Sáb: 8am – 6pm" },
               ].map((item) => (
