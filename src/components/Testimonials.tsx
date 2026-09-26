@@ -27,7 +27,6 @@ const resenasEstaticas = [
     _id: "4",
     nombre: "María González",
     texto: "Increíble tratamiento capilar. Después de meses de preocupación por la pérdida de cabello, he recuperado confianza gracias a sus cuidados.",
-    texto: "Increíble tratamiento capilar. Después de meses de preocupación por la pérdida de cabello, he recuperado confianza gracias a sus cuidados.",
     avatar: "/images/reviews/juan-castiblanco.jpg",
     orden: 4
   },
