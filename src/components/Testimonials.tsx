@@ -5,45 +5,25 @@ const resenasEstaticas = [
   {
     _id: "1",
     nombre: "Juan Castiblanco",
-    texto: "La Dra. Sandra Molano transformó mi autoestima. Sus tratamientos son seguros y los resultados son naturales. ¡Recomendada 100%!",
+    texto: "Excelente servicio y personas muy profesionales. La doctora Sandra sabe muy bien del cuidado estético en general. Muy recomendados",
     avatar: "/images/reviews/juan-castiblanco.jpg",
     orden: 1
   },
   {
-    _id: "2", 
+    _id: "2",
     nombre: "Gustavo Castro",
-    texto: "Excelente profesional. Me realizó un tratamiento de armonización facial y los resultados superaron mis expectativas. Atención personalizada y de calidad.",
+    texto: "Es un centro con buena locación, sin embargo, a mi punto de vista la atención al cliente es su fortaleza más grande porque tienen la prestación de diferentes servicios y le orientan a cada persona según la necesidad con soluciones prácticas y tangibles. La Dra Sandra y su grupo de colaboradores son muy atentos.",
     avatar: "/images/reviews/gustavo-castro.jpg",
     orden: 2
   },
   {
     _id: "3",
     nombre: "Rodrigo Uribe",
-    texto: "Después de probar varios profesionales, encontré en la Dra. Sandra a alguien que realmente entiende la belleza natural. Su consultorio es espectacular.",
+    texto: "Profesionalismo y gran atención fue el mejor regalo que pude darle a mi madre infinitas gracias",
     avatar: "/images/reviews/rodrigo-uribe.jpg",
     orden: 3
   },
-  {
-    _id: "4",
-    nombre: "María González",
-    texto: "Increíble tratamiento capilar. Después de meses de preocupación por la pérdida de cabello, he recuperado confianza gracias a sus cuidados.",
-    avatar: "/images/reviews/juan-castiblanco.jpg",
-    orden: 4
-  },
-  {
-    _id: "5",
-    nombre: "Ana Rodríguez",
-    texto: "La depilación láser con la Dra. Sandra ha sido la mejor decisión. Sin dolor, resultados visibles desde la primera sesión. Profesional y amable.",
-    avatar: "/images/reviews/gustavo-castro.jpg",
-    orden: 5
-  },
-  {
-    _id: "6",
-    nombre: "Carlos Mendoza",
-    texto: "Tratamiento anti-manchas excelente. Mi piel ha mejorado notablemente. El equipo es de última tecnología y la atención es excepcional.",
-    avatar: "/images/reviews/rodrigo-uribe.jpg",
-    orden: 6
-  }
+
 ];
 
 function Avatar({ src, nombre }: { src: string; nombre: string }) {
