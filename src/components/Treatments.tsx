@@ -1,22 +1,55 @@
-import connectDB from "@/lib/mongodb";
-import Tratamiento, { type ITratamiento } from "@/models/Tratamiento";
 import FallbackImg from "@/components/FallbackImg";
 
-async function getTratamientos(): Promise<ITratamiento[]> {
-  try {
-    await connectDB();
-    const docs = await Tratamiento.find({})
-      .sort({ orden: 1, createdAt: 1 })
-      .lean();
-    return docs.map((d) => ({ ...d, _id: String(d._id) })) as ITratamiento[];
-  } catch (err) {
-    console.error("[Treatments] Error al obtener tratamientos:", err);
-    return [];
-  }
-}
+// Datos estáticos de tratamientos
+const tratamientosEstaticos = [
+  {
+    _id: "1",
+    nombre: "Tratamiento Anti-Manchas",
+    descripcion: "Eliminación efectiva de manchas solares, melasma y hiperpigmentación con tecnología láser y peelings médicos personalizados.",
+    imagen: "/images/treatments/Tratamiento anti manchas.jpg",
+    orden: 1
+  },
+  {
+    _id: "2",
+    nombre: "Depilación Láser",
+    descripcion: "Tecnología láser diodo para una depilación definitiva, segura y cómoda en todas las áreas del cuerpo, con resultados duraderos.",
+    imagen: "/images/treatments/Tratamiento depilacion laser.jpg",
+    orden: 2
+  },
+  {
+    _id: "3",
+    nombre: "Tratamiento Capilar",
+    descripcion: "Soluciones avanzadas para problemas de pérdida de cabello, fortalecimiento del folículo y mejora de la densidad capilar con resultados comprobados.",
+    imagen: "/images/treatments/Tratamiento cabello.jpg",
+    orden: 3
+  },
+  {
+    _id: "4",
+    nombre: "Estimulación de Colágeno",
+    descripcion: "Técnicas avanzadas para estimular la producción natural de colágeno, mejorando la firmeza, elasticidad y juventud de la piel.",
+    imagen: "/images/treatments/Estimulacion de colageno.jpg",
+    orden: 4
+  },
+  {
+    _id: "5",
+    nombre: "Eliminación de Tatuajes",
+    descripcion: "Proceso seguro y efectivo para eliminar tatuajes no deseados con tecnología láser Q-Switched, minimizando molestias y maximizando resultados.",
+    imagen: "/images/treatments/Tratamiento tatuajes.jpg",
+    orden: 5
+  },
+  {
+    _id: "6",
+    nombre: "Tratamiento Anti-Acné",
+    descripcion: "Protocolo integral para combatir el acné activo, reducir cicatrices y prevenir futuros brotes, restaurando la salud de tu piel.",
+    imagen: "/images/treatments/Tratamiento anti acne.jpg",
+    orden: 6
+  },
 
-export default async function Treatments() {
-  const tratamientos = await getTratamientos();
+
+];
+
+export default function Treatments() {
+  const tratamientos = tratamientosEstaticos;
 
   return (
     <section className="py-[100px] bg-[#111111] relative" id="tratamientos">
